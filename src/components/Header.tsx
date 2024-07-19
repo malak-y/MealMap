@@ -148,14 +148,17 @@ export const SearchInput = styled.input`
   border-radius: 4px; /* Rounded corners for a softer look */
   padding: 8px; /* Consistent padding */
 `;
- export const Placeholder = styled.img`
+export const Placeholder = styled.img`
   width: 400px;
   height: 400px;
-  margin: 100px;
+  margin: 100px auto; /* Center horizontally */
   opacity: 50%;
+  display: block; /* Ensure the margin auto works */
+  
   @media (max-width: 800px) {
-    max-width: 300px; /* Adjust size for small screens */
-    margin-top: 200px; /* Adjust margin for small screens */
-    transform: translateX(-20%); /* Shift the image to the left */
+    width: 300px; /* Adjust size for small screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Adjust margin for small screens, center horizontally */
+    display: block;
   }
 `;
